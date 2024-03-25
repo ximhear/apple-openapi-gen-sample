@@ -1,0 +1,70 @@
+openapi: "3.0.3"
+info:
+  title: "PostService"
+  version: "1.0.0"
+servers:
+  - url: "https://jsonplaceholder.typicode.com"
+    description: "An endpoint to get various objects"
+paths:
+  /posts:
+    get:
+      operationId: "getPosts"
+      responses:
+        "200":
+          description: "Returns an array of post objects"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Post"
+  /greet:
+    get:
+      operationId: getGreeting
+      parameters:
+        - name: name
+          required: false
+          in: query
+          description: The name used in the returned greeting.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A success response with a greeting.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Greeting'
+        '401':
+          description: Authentication required.
+components:
+  schemas:
+    Post:
+      type: object
+      required:
+        - userId
+        - id
+        - title
+        - body
+      properties:
+        userId:
+          type: integer
+          example: 1
+        id:
+          type: integer
+          example: 1
+        title:
+          type: string
+          example: "title ipsum"
+        body:
+          type: string
+          example: "body ipsum"
+    Greeting:
+      type: object
+      description: A value with the greeting contents.
+      properties:
+        message:
+          type: string
+          description: The string representation of the greeting.
+      required:
+        - message

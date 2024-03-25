@@ -11,6 +11,10 @@
 		EC6E72AA2BB0FEF400C7D8E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6E72A92BB0FEF400C7D8E1 /* ContentView.swift */; };
 		EC6E72AC2BB0FEF600C7D8E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC6E72AB2BB0FEF600C7D8E1 /* Assets.xcassets */; };
 		EC6E72AF2BB0FEF600C7D8E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC6E72AE2BB0FEF600C7D8E1 /* Preview Assets.xcassets */; };
+		EC6E72BA2BB100F700C7D8E1 /* openapi-generator-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = EC6E72B82BB100F700C7D8E1 /* openapi-generator-config.yaml */; };
+		EC6E72BB2BB100F700C7D8E1 /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = EC6E72B92BB100F700C7D8E1 /* openapi.yaml */; };
+		EC6E72C62BB106BF00C7D8E1 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = EC6E72C52BB106BF00C7D8E1 /* OpenAPIRuntime */; };
+		EC6E72CA2BB1078000C7D8E1 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = EC6E72C92BB1078000C7D8E1 /* OpenAPIURLSession */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,9 @@
 		EC6E72A92BB0FEF400C7D8E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EC6E72AB2BB0FEF600C7D8E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC6E72AE2BB0FEF600C7D8E1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EC6E72B82BB100F700C7D8E1 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
+		EC6E72B92BB100F700C7D8E1 /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
+		EC6E72BC2BB102E100C7D8E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC6E72CA2BB1078000C7D8E1 /* OpenAPIURLSession in Frameworks */,
+				EC6E72C62BB106BF00C7D8E1 /* OpenAPIRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +46,7 @@
 			children = (
 				EC6E72A62BB0FEF400C7D8E1 /* OpenAPI01 */,
 				EC6E72A52BB0FEF400C7D8E1 /* Products */,
+				EC6E72BD2BB102EE00C7D8E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +61,9 @@
 		EC6E72A62BB0FEF400C7D8E1 /* OpenAPI01 */ = {
 			isa = PBXGroup;
 			children = (
+				EC6E72BC2BB102E100C7D8E1 /* Info.plist */,
+				EC6E72B82BB100F700C7D8E1 /* openapi-generator-config.yaml */,
+				EC6E72B92BB100F700C7D8E1 /* openapi.yaml */,
 				EC6E72A72BB0FEF400C7D8E1 /* OpenAPI01App.swift */,
 				EC6E72A92BB0FEF400C7D8E1 /* ContentView.swift */,
 				EC6E72AB2BB0FEF600C7D8E1 /* Assets.xcassets */,
@@ -67,6 +80,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		EC6E72BD2BB102EE00C7D8E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -81,8 +101,13 @@
 			buildRules = (
 			);
 			dependencies = (
+				EC6E72C12BB1059500C7D8E1 /* PBXTargetDependency */,
 			);
 			name = OpenAPI01;
+			packageProductDependencies = (
+				EC6E72C52BB106BF00C7D8E1 /* OpenAPIRuntime */,
+				EC6E72C92BB1078000C7D8E1 /* OpenAPIURLSession */,
+			);
 			productName = OpenAPI01;
 			productReference = EC6E72A42BB0FEF400C7D8E1 /* OpenAPI01.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +136,11 @@
 				Base,
 			);
 			mainGroup = EC6E729B2BB0FEF400C7D8E1;
+			packageReferences = (
+				EC6E72B52BB100D500C7D8E1 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */,
+				EC6E72C42BB106BF00C7D8E1 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */,
+				EC6E72C82BB1078000C7D8E1 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */,
+			);
 			productRefGroup = EC6E72A52BB0FEF400C7D8E1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,7 +156,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC6E72AF2BB0FEF600C7D8E1 /* Preview Assets.xcassets in Resources */,
+				EC6E72BB2BB100F700C7D8E1 /* openapi.yaml in Resources */,
 				EC6E72AC2BB0FEF600C7D8E1 /* Assets.xcassets in Resources */,
+				EC6E72BA2BB100F700C7D8E1 /* openapi-generator-config.yaml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +175,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC6E72C12BB1059500C7D8E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = EC6E72C02BB1059500C7D8E1 /* OpenAPIGenerator */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		EC6E72B02BB0FEF600C7D8E1 /* Debug */ = {
@@ -274,6 +313,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"OpenAPI01/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OpenAPI01/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -302,6 +342,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"OpenAPI01/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OpenAPI01/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -342,6 +383,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC6E72B52BB100D500C7D8E1 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-generator";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.1;
+			};
+		};
+		EC6E72C42BB106BF00C7D8E1 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-runtime";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.2;
+			};
+		};
+		EC6E72C82BB1078000C7D8E1 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-urlsession";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC6E72C02BB1059500C7D8E1 /* OpenAPIGenerator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC6E72B52BB100D500C7D8E1 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */;
+			productName = "plugin:OpenAPIGenerator";
+		};
+		EC6E72C52BB106BF00C7D8E1 /* OpenAPIRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC6E72C42BB106BF00C7D8E1 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */;
+			productName = OpenAPIRuntime;
+		};
+		EC6E72C92BB1078000C7D8E1 /* OpenAPIURLSession */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC6E72C82BB1078000C7D8E1 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */;
+			productName = OpenAPIURLSession;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EC6E729C2BB0FEF400C7D8E1 /* Project object */;
 }
