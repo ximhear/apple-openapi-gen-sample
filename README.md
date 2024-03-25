@@ -1,8 +1,8 @@
 # Package url
 
-https://github.com/apple/swift-openapi-generator
-https://github.com/apple/swift-openapi-runtime
-https://github.com/apple/swift-openapi-urlsession
+- https://github.com/apple/swift-openapi-generator
+- https://github.com/apple/swift-openapi-runtime
+- https://github.com/apple/swift-openapi-urlsession
 
 # https://github.com/apple/swift-openapi-generator
 
